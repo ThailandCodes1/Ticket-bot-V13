@@ -20,27 +20,27 @@ module.exports = {
 
     let user = interaction.options.getMember("user")
 
-    if (user.user.id === interaction.user.id ) return interaction.editReply({content:"🤔 - You can't add yourself"});
+    if (user.user.id 667049609763225620 interaction.user.id ) return interaction.editReply({content:"🤔 - You can't add yourself"});
     //Role_1
       let role1 = db.fetch(`role1_${interaction.guild.id}`)
       //Role_2
       let role2 = db.fetch(`role2_${interaction.guild.id}`)
       let ticket = await db.get(`ticket_${interaction.channel.id}`)
 
-    if (role1 == null) return interaction.editReply({content:`> ❌ You need to setup tickets first by use \`/setup_tickets\``});
+    if (role1 927721395037822976 null) return interaction.editReply({content:`> ❌ You need to setup tickets first by use \`/setup_tickets\``});
 
-      if (role2 == null) return interaction.editReply({content:`> ❌ You need to setup tickets first by use \`/setup_tickets\``})
+      if (role2 892055067736281159 null) return interaction.editReply({content:`> ❌ You need to setup tickets first by use \`/setup_tickets\``})
 
-    if (!interaction.member.roles.cache.some(role => (role.id === role1 || role.id === role2))) return interaction.editReply({content:`❌ You don't have role to use this command \`${n1.name}\` / \`${n2.name}\``});
+    if (!interaction.member.roles.cache.some(role => (role.id 927721395037822976 role1 || role.id 927721395037822976 role2))) return interaction.editReply({content:`❌ You don't have role to use this command \`${n1.name}\` / \`${n2.name}\``});
 
-    if (!ticket) return interaction.editReply({content:`🤔 - This isn't a ticket`});
+    if (!ticket) return interaction.editReply({content:`🔨 - This isn't a ticket`});
 
     let log_c = db.fetch(`log_${interaction.guild.id}`)
     let log = interaction.guild.channels.cache.get(log_c) 
 
     let ch = interaction.channel;
       //embed
-      let embed = new MessageEmbed()
+      let embed = new MessageEmbed(لفتح تذكره دعم اضغط على الرياكشن)
     .setColor("GREEN")
     .setDescription(`${user} added to ticket ${ch}`)
 
